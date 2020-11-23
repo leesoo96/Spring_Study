@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Student 클래스에서 생성자가 있어야만 한다. 처음에 만들지않아서 에러 발생 확인 -->
+	<bean id="student1" class="com.LSJ.first.ch11_23.Student">
+		<constructor-arg>
+			<value>홍시영</value>
+		</constructor-arg>	
+		<constructor-arg>
+			<value>18</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>2</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>1</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="student2" class="com.LSJ.first.ch11_23.Student">
+		<constructor-arg value="이가희" />
+		<constructor-arg value="17" />
+		<constructor-arg value="1" />
+		<constructor-arg value="3" />
+	</bean>
+	<!-- 똑같은 클래스로 객체를 2개만듦 -->
+	
+	<bean id="studentInfo" class="com.LSJ.first.ch11_23.StudentInfo">
+		<constructor-arg>
+			<ref bean="student1"/> <!-- 첫번째로 만든 bean을 참조한다 -->
+		</constructor-arg>
+	</bean>
+</beans>

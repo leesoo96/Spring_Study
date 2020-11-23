@@ -8,6 +8,10 @@
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
 		<config>src/main/resources/applicationExamCTX.xml</config>
+		<config>src/main/resources/MyInfoCTX.xml</config>
+		<config>src/main/resources/MyInfoExamCTX.xml</config>
+		<config>src/main/resources/StudentCTX.xml</config>
+		<config>src/main/resources/PencilCTX.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
