@@ -20,6 +20,8 @@
 		<config>src/main/resources/Student11_28CTX3.xml</config>
 		<config>src/main/resources/adminCTX.xml</config>
 		<config>src/main/resources/adminCTX2.xml</config>
+		<config>src/main/resources/Str_devCTX.xml</config>
+		<config>src/main/resources/Str_runCTX.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
