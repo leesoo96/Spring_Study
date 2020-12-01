@@ -22,6 +22,9 @@
 		<config>src/main/resources/adminCTX2.xml</config>
 		<config>src/main/resources/Str_devCTX.xml</config>
 		<config>src/main/resources/Str_runCTX.xml</config>
+		<config>src/main/resources/AOPCTX.xml</config>
+		<config>src/main/resources/AOP2CTX.xml</config>
+		<config>src/main/resources/AOP_AnnotationCTX.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>

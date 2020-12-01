@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<bean id="logAop" class="com.LSJ.first.ch12_01.LogAop" />
+	
+	<aop:config>
+		<aop:aspect id="logger" ref="logAop">
+			<!-- pointcut => 실제 공통기능이 적용되는 부분 -->
+			<aop:pointcut expression="within(com.LSJ.first.ch12_01.*)" id="publicM"/>
+			
+			<!-- 어떤 메소드를 사용할 것인가 -->
+			<aop:around pointcut-ref="publicM" method="loggerAop"/>
+		</aop:aspect>
+	</aop:config>
+	<!-- Advice => 공통기능 자체 -->
+	
+	<bean id="student" class="com.LSJ.first.ch12_01.Student">
+		<property name="name" value="홍시영" /> 
+		<property name="age" value="18" /> 
+		<property name="gradeNum" value="2" /> 
+		<property name="classNum" value="5" /> 
+	</bean>
+	
+	<bean id="worker" class="com.LSJ.first.ch12_01.Workers">
+		<property name="name" value="이수진" /> 
+		<property name="age" value="26" /> 
+		<property name="job" value="개발자" /> 
+	</bean>
+</beans>
